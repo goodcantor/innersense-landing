@@ -6,6 +6,10 @@
   }
 
   &__img {
+    @include breakpoint(375px) {
+      width: 163px;
+      height: auto;
+    }
   }
 
   &__btn {
@@ -23,6 +27,13 @@
     border-radius: 30px;
 
     margin: 12px 0;
+
+    @include breakpoint(375px) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      padding: 10px 22px;
+    }
   }
 }
 
@@ -34,6 +45,16 @@
     align-items: center;
 
     padding: 70px 0 120px 0;
+
+    @include breakpoint(834px) {
+      flex-wrap: wrap;
+      gap: 80px;
+      padding: 60px 0 100px 0;
+    }
+    @include breakpoint(375px) {
+      gap: 40px;
+      padding: 40px 0 80px 0;
+    }
   }
 
   &__left {
@@ -41,6 +62,14 @@
     flex-direction: column;
     gap: 36px;
     align-items: flex-start;
+
+    @include breakpoint(834px) {
+      flex: 1 1 100%;
+      align-items: center;
+    }
+    @include breakpoint(375px) {
+      gap: 24px;
+    }
   }
 
   &__left-title {
@@ -52,6 +81,17 @@
 
     color: #0c0748;
     max-width: 693px;
+
+    @include breakpoint(834px) {
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+      max-width: 600px;
+    }
+    @include breakpoint(375px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   &__left-title-bold {
@@ -67,9 +107,23 @@
 
     color: rgba(12, 7, 72, 0.7);
     max-width: 509px;
+
+    @include breakpoint(834px) {
+      text-align: center;
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 470px;
+    }
+    @include breakpoint(375px) {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   &__left-btn {
+    display: flex;
+    align-items: center;
+
     font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 600;
@@ -81,6 +135,11 @@
     padding: 14px 24px;
     background: #0c0748;
     border-radius: 30px;
+
+    @include breakpoint(375px) {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   &__left-btn-svg {
@@ -88,13 +147,22 @@
   }
 
   &__right {
+    margin: 0 auto;
   }
 
   &__right-img-div {
     position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   &__right-img {
+    width: auto;
+    height: 481px;
+
+    @include breakpoint(834px) {
+      margin-right: -130px;
+    }
   }
 
   &__right-top-label {
@@ -115,6 +183,20 @@
     border-radius: 16px;
     padding: 16px;
     width: 244px;
+
+    @include breakpoint(834px) {
+      top: 40px;
+      right: -50px;
+    }
+    @include breakpoint(375px) {
+      padding: 12px;
+      font-size: 13px;
+      line-height: 18px;
+      width: 175px;
+
+      top: 40px;
+      right: -30px;
+    }
   }
 
   &__right-bottom-label {
@@ -135,5 +217,19 @@
     border-radius: 16px;
     padding: 16px;
     width: 253px;
+
+    @include breakpoint(834px) {
+      bottom: 65px;
+      left: -110px;
+    }
+    @include breakpoint(375px) {
+      padding: 12px;
+      font-size: 13px;
+      line-height: 18px;
+      width: 169px;
+
+      bottom: 65px;
+      left: -40px;
+    }
   }
 }
