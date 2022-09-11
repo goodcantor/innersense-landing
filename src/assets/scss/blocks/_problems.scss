@@ -1,7 +1,7 @@
 .problems {
   padding: 90px 90px;
 
-  // height: 300vh;
+  height: 3000px;
 
   & > div {
     height: 100%;
@@ -10,7 +10,7 @@
 
   &__inner {
     position: sticky;
-    top: calc(50% - 250px);
+    top: calc(50% - 300px);
   }
 
   &__title {
@@ -73,8 +73,12 @@
   }
 
   &__right-img-div1 {
+    display: none;
     position: relative;
     margin-right: 90px;
+
+    opacity: 0;
+    transition: all 2.3s ease;
   }
 
   &__right-img {
@@ -95,29 +99,31 @@
   &__right-img-div2 {
     position: relative;
     display: none;
+    margin-right: 90px;
   }
 
   &__right-label2 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -40px;
+    right: -140px;
   }
 
   &__right-img-div3 {
     position: relative;
     display: none;
+    margin-right: 90px;
   }
 
   &__right-label3 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -40px;
+    right: -140px;
   }
 
   &__right-label3-3 {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 20px;
+    left: -90px;
   }
 }
 
@@ -127,15 +133,41 @@
 }
 
 .display {
+  // animation: anim 0.5s ease;
   display: block !important;
+  opacity: 1;
+
+  transition: opacity 0.5s ease;
 }
 
+.triger {
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
 .triger1 {
   position: absolute;
-  top: 100vh;
+  top: 1000px;
+  left: 0;
 }
 
 .triger2 {
   position: absolute;
-  top: 200vh;
+  top: 2000px;
+  left: 0;
+}
+
+.prob {
+  position: relative;
+  height: 100%;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    display: block !important;
+  }
+  100% {
+    opacity: 1;
+  }
 }

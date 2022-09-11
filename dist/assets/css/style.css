@@ -702,6 +702,7 @@ a:focus {
 
 .problems {
     padding: 90px 90px;
+    height: 3000px;
 }
 
 .problems > div {
@@ -711,7 +712,7 @@ a:focus {
 
 .problems__inner {
     position: sticky;
-    top: calc(50% - 250px);
+    top: calc(50% - 300px);
 }
 
 .problems__title {
@@ -771,8 +772,11 @@ a:focus {
 }
 
 .problems__right-img-div1 {
+    display: none;
     position: relative;
     margin-right: 90px;
+    opacity: 0;
+    transition: all 2.3s ease;
 }
 
 .problems__right-label1 {
@@ -790,29 +794,31 @@ a:focus {
 .problems__right-img-div2 {
     position: relative;
     display: none;
+    margin-right: 90px;
 }
 
 .problems__right-label2 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -40px;
+    right: -140px;
 }
 
 .problems__right-img-div3 {
     position: relative;
     display: none;
+    margin-right: 90px;
 }
 
 .problems__right-label3 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -40px;
+    right: -140px;
 }
 
 .problems__right-label3-3 {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 20px;
+    left: -90px;
 }
 
 .bg {
@@ -822,14 +828,51 @@ a:focus {
 
 .display {
     display: block !important;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.triger {
+    position: absolute;
+    top: 0px;
+    left: 0;
 }
 
 .triger1 {
     position: absolute;
-    top: 100vh;
+    top: 1000px;
+    left: 0;
 }
 
 .triger2 {
     position: absolute;
-    top: 200vh;
+    top: 2000px;
+    left: 0;
+}
+
+.prob {
+    position: relative;
+    height: 100%;
+}
+
+@-webkit-keyframes anim {
+    0% {
+        opacity: 0;
+        display: block !important;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        display: block !important;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
