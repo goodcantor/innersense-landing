@@ -1,0 +1,141 @@
+.problems {
+  padding: 90px 90px;
+
+  // height: 300vh;
+
+  & > div {
+    height: 100%;
+    position: relative;
+  }
+
+  &__inner {
+    position: sticky;
+    top: calc(50% - 250px);
+  }
+
+  &__title {
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41px;
+
+    color: #0c0748;
+
+    margin-bottom: 67px;
+  }
+
+  &__title-bold {
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left-block {
+    border-radius: 16px;
+    padding: 22px;
+    max-width: 318px;
+  }
+
+  &__left-block-title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #0c0748;
+
+    margin-bottom: 8px;
+  }
+
+  &__left-block-p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #0c0748;
+  }
+
+  &__right {
+  }
+
+  &__right-img-div1 {
+    position: relative;
+    margin-right: 90px;
+  }
+
+  &__right-img {
+  }
+
+  &__right-label1 {
+    position: absolute;
+    top: -40px;
+    right: -90px;
+  }
+
+  &__right-label1-1 {
+    position: absolute;
+    bottom: 40px;
+    left: -80px;
+  }
+
+  &__right-img-div2 {
+    position: relative;
+    display: none;
+  }
+
+  &__right-label2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__right-img-div3 {
+    position: relative;
+    display: none;
+  }
+
+  &__right-label3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__right-label3-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.bg {
+  background: rgba(227, 207, 255, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.display {
+  display: block !important;
+}
+
+.triger1 {
+  position: absolute;
+  top: 100vh;
+}
+
+.triger2 {
+  position: absolute;
+  top: 200vh;
+}
