@@ -583,7 +583,6 @@ a:focus {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
@@ -632,7 +631,6 @@ a:focus {
     position: absolute;
     top: 15px;
     right: -30px;
-    font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -668,7 +666,6 @@ a:focus {
     position: absolute;
     bottom: 70px;
     left: -140px;
-    font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -798,6 +795,7 @@ a:focus {
 
 .problems__right-img-div1 {
     display: none;
+    visibility: hidden;
     position: relative;
     margin-right: 90px;
     opacity: 0;
@@ -817,6 +815,8 @@ a:focus {
 }
 
 .problems__right-img-div2 {
+    opacity: 0;
+    visibility: hidden;
     position: relative;
     display: none;
     margin-right: 90px;
@@ -829,6 +829,8 @@ a:focus {
 }
 
 .problems__right-img-div3 {
+    opacity: 0;
+    visibility: hidden;
     position: relative;
     display: none;
     margin-right: 90px;
@@ -856,6 +858,7 @@ a:focus {
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
+        gap: 60px;
     }
 }
 
@@ -989,13 +992,15 @@ a:focus {
 
 .bg {
     background: rgba(227, 207, 255, 0.2) !important;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .display {
     display: block !important;
+    visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    -webkit-animation: anim 1s normal forwards;
+    animation: anim 1s normal forwards;
 }
 
 .triger {
@@ -1042,21 +1047,84 @@ a:focus {
 @-webkit-keyframes anim {
     0% {
         opacity: 0;
-        display: block !important;
     }
 
     100% {
-        opacity: 1;
+        visibility: visible;
+        opacity: 1 !important;
     }
 }
 
 @keyframes anim {
     0% {
         opacity: 0;
-        display: block !important;
     }
 
     100% {
-        opacity: 1;
+        visibility: visible;
+        opacity: 1 !important;
     }
+}
+
+.combine {
+    margin: 90px 0px;
+    background: #f9f4fe;
+    position: relative;
+}
+
+.combine > div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.combine__inner {
+    background: url("../images/third/bg.png") center/cover no-repeat;
+    width: 1125px !important;
+    height: 595px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.combine__block {
+    width: 667px;
+    height: 220px;
+    background: #ffffff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.combine__text {
+    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+    color: #0c0748;
+    max-width: 600px;
+}
+
+@media (max-width: 375px) {
+    .combine__text {
+        font-size: 18px;
+        line-height: 21px;
+        max-width: 320px;
+    }
+}
+
+.combine__text-bold {
+    font-weight: 700;
 }
