@@ -67,7 +67,7 @@
         <div class="home__right">
           <div class="home__right-img-div">
             <img
-              src="assets/images/first/iphone4.png"
+              src="assets/images/first/Iphone4.png"
               alt=""
               class="home__right-img"
             />
@@ -165,6 +165,82 @@
               </div>
             </div>
           </div>
+
+          <div class="problems__content-tablet">
+            <div class="problems__content-tablet-block">
+              <div class="problems__content-tablet-block-img">
+                <img
+                  src="assets/images/problems/img1.png"
+                  alt=""
+                  class="problems__right-img"
+                />
+                <img
+                  src="assets/images/problems/label1.svg"
+                  alt=""
+                  class="problems__right-label1"
+                />
+                <img
+                  src="assets/images/problems/label1-1.svg"
+                  alt=""
+                  class="problems__right-label1-1"
+                />
+              </div>
+              <div class="problems__content-tablet-text">
+                <h4 class="problems__content-tablet-title">Low self-esteem</h4>
+                <p class="problems__content-tablet-p">
+                  Build confidence through simple daily behavioural practices
+                </p>
+              </div>
+            </div>
+
+            <div class="problems__content-tablet-block">
+              <div class="problems__content-tablet-block-img">
+                <img
+                  src="assets/images/problems/img2.png"
+                  alt=""
+                  class="problems__right-img"
+                />
+                <img
+                  src="assets/images/problems/label2.svg"
+                  alt=""
+                  class="problems__right-label2"
+                />
+              </div>
+
+              <div class="problems__content-tablet-text">
+                <h4 class="problems__content-tablet-title">Anxiety</h4>
+                <p class="problems__content-tablet-p">
+                  Connect the dots between your behavior and anxiety causes
+                </p>
+              </div>
+            </div>
+
+            <div class="problems__content-tablet-block">
+              <div class="problems__content-tablet-block-img">
+                <img
+                  src="assets/images/problems/img3.png"
+                  alt=""
+                  class="problems__right-img"
+                />
+                <img
+                  src="assets/images/problems/label3.svg"
+                  alt=""
+                  class="problems__right-label3"
+                />
+                <img
+                  src="assets/images/problems/label3-3.svg"
+                  alt=""
+                  class="problems__right-label3-3"
+                />
+              </div>
+              <div class="problems__content-tablet-text">
+                <h4 class="problems__content-tablet-title">Burnout</h4>
+                <p class="problems__content-tablet-p">
+                  Take your life back making small step every day
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -175,63 +251,65 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
 <script>
-  // init controller
-  var controller = new ScrollMagic.Controller();
+  if (document.documentElement.clientWidth > 834) {
+    // init controller
+    var controller = new ScrollMagic.Controller();
 
-  // build scenes
-  new ScrollMagic.Scene({
-    triggerElement: ".triger",
-    duration: 1000,
-  })
+    // build scenes
+    new ScrollMagic.Scene({
+      triggerElement: ".triger",
+      duration: 1000,
+    })
 
-    .setClassToggle("#block1", "bg") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle("#block1", "bg") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".triger",
-    duration: 1000,
-  })
+    new ScrollMagic.Scene({
+      triggerElement: ".triger",
+      duration: 1000,
+    })
 
-    .setClassToggle(".problems__right-img-div1", "display") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle(".problems__right-img-div1", "display") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".triger1",
-    duration: 1000,
-  })
+    new ScrollMagic.Scene({
+      triggerElement: ".triger1",
+      duration: 1000,
+    })
 
-    .setClassToggle("#block2", "bg") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle("#block2", "bg") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".triger1",
-    duration: 1000,
-  })
+    new ScrollMagic.Scene({
+      triggerElement: ".triger1",
+      duration: 1000,
+    })
 
-    .setClassToggle(".problems__right-img-div2", "display") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle(".problems__right-img-div2", "display") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".triger2",
-    duration: 1000,
-  })
+    new ScrollMagic.Scene({
+      triggerElement: ".triger2",
+      duration: 1000,
+    })
 
-    .setClassToggle("#block3", "bg") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle("#block3", "bg") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".triger2",
-    duration: 1000,
-  })
+    new ScrollMagic.Scene({
+      triggerElement: ".triger2",
+      duration: 1000,
+    })
 
-    .setClassToggle(".problems__right-img-div3", "display") // add class toggle
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+      .setClassToggle(".problems__right-img-div3", "display") // add class toggle
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+  }
 </script>
 
 </main>

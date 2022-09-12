@@ -701,8 +701,14 @@ a:focus {
 }
 
 .problems {
-    padding: 90px 90px;
+    padding: 90px 0px;
     height: 3000px;
+}
+
+@media (max-width: 834px) {
+    .problems {
+        height: auto;
+    }
 }
 
 .problems > div {
@@ -713,6 +719,12 @@ a:focus {
 .problems__inner {
     position: sticky;
     top: calc(50% - 300px);
+}
+
+@media (max-width: 834px) {
+    .problems__inner {
+        position: static;
+    }
 }
 
 .problems__title {
@@ -726,6 +738,14 @@ a:focus {
     margin-bottom: 67px;
 }
 
+@media (max-width: 375px) {
+    .problems__title {
+        margin-bottom: 30px;
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
 .problems__title-bold {
     font-weight: 700;
 }
@@ -737,6 +757,12 @@ a:focus {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+@media (max-width: 834px) {
+    .problems__content {
+        display: none;
+    }
 }
 
 .problems__left {
@@ -763,7 +789,6 @@ a:focus {
 }
 
 .problems__left-block-p {
-    font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -821,6 +846,147 @@ a:focus {
     left: -90px;
 }
 
+.problems__content-tablet {
+    display: none;
+}
+
+@media (max-width: 834px) {
+    .problems__content-tablet {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__content-tablet {
+        gap: 42px;
+    }
+}
+
+.problems__content-tablet-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.problems__content-tablet-block-img {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 375px) {
+    .problems__content-tablet-block-img {
+        margin-bottom: 16px;
+    }
+}
+
+.problems__right-img {
+    width: 100%;
+}
+
+@media (max-width: 834px) {
+    .problems__right-label1 {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__right-label1 {
+        display: none;
+    }
+}
+
+@media (max-width: 834px) {
+    .problems__right-label1-1 {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__right-label1-1 {
+        display: none;
+    }
+}
+
+.problems__content-tablet-title {
+    color: #0c0748;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 375px) {
+    .problems__content-tablet-title {
+        margin-bottom: 8px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+.problems__content-tablet-p {
+    color: #0c0748;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+@media (max-width: 375px) {
+    .problems__content-tablet-p {
+        font-size: 16px;
+        line-height: 21px;
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 834px) {
+    .problems__right-label2 {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__right-label2 {
+        display: none;
+    }
+}
+
+@media (max-width: 834px) {
+    .problems__right-label3 {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__right-label3 {
+        display: none;
+    }
+}
+
+@media (max-width: 834px) {
+    .problems__right-label3-3 {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 375px) {
+    .problems__right-label3-3 {
+        display: none;
+    }
+}
+
 .bg {
     background: rgba(227, 207, 255, 0.2) !important;
     transition: all 0.3s ease;
@@ -838,16 +1004,34 @@ a:focus {
     left: 0;
 }
 
+@media (max-width: 834px) {
+    .triger {
+        display: none;
+    }
+}
+
 .triger1 {
     position: absolute;
     top: 1000px;
     left: 0;
 }
 
+@media (max-width: 834px) {
+    .triger1 {
+        display: none;
+    }
+}
+
 .triger2 {
     position: absolute;
     top: 2000px;
     left: 0;
+}
+
+@media (max-width: 834px) {
+    .triger2 {
+        display: none;
+    }
 }
 
 .prob {

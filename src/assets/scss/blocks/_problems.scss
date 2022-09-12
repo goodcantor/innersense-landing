@@ -1,7 +1,11 @@
 .problems {
-  padding: 90px 90px;
+  padding: 90px 0px;
 
   height: 3000px;
+
+  @include breakpoint(834px) {
+    height: auto;
+  }
 
   & > div {
     height: 100%;
@@ -11,6 +15,10 @@
   &__inner {
     position: sticky;
     top: calc(50% - 300px);
+
+    @include breakpoint(834px) {
+      position: static;
+    }
   }
 
   &__title {
@@ -24,6 +32,13 @@
     color: #0c0748;
 
     margin-bottom: 67px;
+
+    @include breakpoint(375px) {
+      margin-bottom: 30px;
+
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   &__title-bold {
@@ -34,6 +49,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(834px) {
+      display: none;
+    }
   }
 
   &__left {
@@ -60,7 +79,7 @@
   }
 
   &__left-block-p {
-    font-family: "SF Pro Text";
+    // font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -125,6 +144,121 @@
     bottom: 20px;
     left: -90px;
   }
+
+  &__content-tablet {
+    display: none;
+
+    @include breakpoint(834px) {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    @include breakpoint(375px) {
+      gap: 42px;
+    }
+  }
+
+  &__content-tablet-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content-tablet-block-img {
+    position: relative;
+
+    margin-bottom: 24px;
+
+    @include breakpoint(375px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__right-img {
+    width: 100%;
+  }
+
+  &__right-label1 {
+    @include breakpoint(834px) {
+      transform: scale(0.8);
+    }
+    @include breakpoint(375px) {
+      display: none;
+    }
+  }
+
+  &__right-label1-1 {
+    @include breakpoint(834px) {
+      transform: scale(0.8);
+    }
+    @include breakpoint(375px) {
+      display: none;
+    }
+  }
+
+  &__content-tablet-text {
+  }
+
+  &__content-tablet-title {
+    color: #0c0748;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    margin-bottom: 12px;
+
+    @include breakpoint(375px) {
+      margin-bottom: 8px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__content-tablet-p {
+    color: #0c0748;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    @include breakpoint(375px) {
+      font-size: 16px;
+      line-height: 21px;
+
+      max-width: 240px;
+    }
+  }
+
+  &__right-label2 {
+    @include breakpoint(834px) {
+      transform: scale(0.8);
+    }
+    @include breakpoint(375px) {
+      display: none;
+    }
+  }
+
+  &__right-label3 {
+    @include breakpoint(834px) {
+      transform: scale(0.8);
+    }
+
+    @include breakpoint(375px) {
+      display: none;
+    }
+  }
+
+  &__right-label3-3 {
+    @include breakpoint(834px) {
+      transform: scale(0.8);
+    }
+    @include breakpoint(375px) {
+      display: none;
+    }
+  }
 }
 
 .bg {
@@ -144,17 +278,29 @@
   position: absolute;
   top: 0px;
   left: 0;
+
+  @include breakpoint(834px) {
+    display: none;
+  }
 }
 .triger1 {
   position: absolute;
   top: 1000px;
   left: 0;
+
+  @include breakpoint(834px) {
+    display: none;
+  }
 }
 
 .triger2 {
   position: absolute;
   top: 2000px;
   left: 0;
+
+  @include breakpoint(834px) {
+    display: none;
+  }
 }
 
 .prob {
