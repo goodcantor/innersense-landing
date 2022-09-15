@@ -33,7 +33,7 @@
 
     margin-bottom: 67px;
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       margin-bottom: 30px;
 
       font-size: 28px;
@@ -160,7 +160,7 @@
       gap: 60px;
     }
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       gap: 42px;
     }
   }
@@ -176,7 +176,7 @@
 
     margin-bottom: 24px;
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       margin-bottom: 16px;
     }
   }
@@ -189,7 +189,7 @@
     @include breakpoint(834px) {
       transform: scale(0.8);
     }
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       display: none;
     }
   }
@@ -198,7 +198,7 @@
     @include breakpoint(834px) {
       transform: scale(0.8);
     }
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       display: none;
     }
   }
@@ -215,7 +215,7 @@
 
     margin-bottom: 12px;
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       margin-bottom: 8px;
       font-size: 22px;
       line-height: 28px;
@@ -230,7 +230,7 @@
     font-size: 16px;
     line-height: 21px;
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       font-size: 16px;
       line-height: 21px;
 
@@ -242,7 +242,7 @@
     @include breakpoint(834px) {
       transform: scale(0.8);
     }
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       display: none;
     }
   }
@@ -252,7 +252,7 @@
       transform: scale(0.8);
     }
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       display: none;
     }
   }
@@ -261,7 +261,7 @@
     @include breakpoint(834px) {
       transform: scale(0.8);
     }
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       display: none;
     }
   }

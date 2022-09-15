@@ -1,5 +1,5 @@
 .combine {
-  margin: 90px 0px;
+  margin-top: 90px;
   background: #f9f4fe;
 
   position: relative;
@@ -48,7 +48,7 @@
     color: #0c0748;
     max-width: 600px;
 
-    @include breakpoint(375px) {
+    @include breakpoint(400px) {
       font-size: 18px;
       line-height: 21px;
 
