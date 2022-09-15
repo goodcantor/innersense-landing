@@ -7,6 +7,8 @@
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
+
+  // overflow-y: hidden !important;
 }
 
 html {
@@ -14,9 +16,10 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
+
   // height: 1000vh;
 
   &._lock {

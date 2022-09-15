@@ -1,4 +1,5 @@
 .combine {
+  // overflow-x: hidden;
   margin-top: 90px;
   background: #f9f4fe;
 
@@ -11,7 +12,8 @@
 
   &__inner {
     background: url("../images/third/bg.png") center/cover no-repeat;
-    width: 1125px !important;
+    max-width: 1125px;
+    width: 100%;
     height: 595px;
 
     display: flex;
@@ -48,7 +50,7 @@
     color: #0c0748;
     max-width: 600px;
 
-    @include breakpoint(400px) {
+    @include breakpoint(600px) {
       font-size: 18px;
       line-height: 21px;
 
