@@ -1,0 +1,52 @@
+.try {
+  padding: 140px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+
+    @include breakpoint(600px) {
+    gap: 24px;
+  }
+  }
+
+  &__btn {
+    padding: 12px 40px;
+    background: #0c0748;
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+
+    color: white;
+
+    @include breakpoint(600px) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+
+.try .problems__title {
+  margin-bottom: 0;
+
+  @include breakpoint(834px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @include breakpoint(600px) {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 320px;
+  }
+}
+.problems {
+  &__title {
+  }
+
+  &__title-bold {
+  }
+}

@@ -1,0 +1,65 @@
+.how {
+  padding-top: 140px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(834px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 42px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    @include breakpoint(834px) {
+      gap: 24px;
+    }
+  }
+
+  &__left-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 276px;
+
+    @include breakpoint(834px) {
+      max-width: 520px;
+    }
+  }
+
+  &__left-row-img {
+  }
+
+  &__left-row-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: rgba(12, 7, 72, 0.7);
+  }
+
+  &__how-right {
+  }
+
+  &__right-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.how .problems__title {
+  @include breakpoint(600px) {
+    margin-bottom: 42px;
+  }
+}
+
+.how > .container {
+  max-width: 970px;
+}
