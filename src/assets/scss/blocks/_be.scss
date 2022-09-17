@@ -49,7 +49,7 @@
   &__block-text {
     max-width: 382px;
     @include breakpoint(834px) {
-      width: 276px;
+      max-width: 276px;
     }
     @include breakpoint(600px) {
       width: auto;

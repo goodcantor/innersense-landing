@@ -400,6 +400,7 @@ textarea {
 
 html {
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -626,7 +627,7 @@ a:focus {
 .home__right-top-label {
     position: absolute;
     top: 15px;
-    right: -30px;
+    right: 0px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -711,6 +712,7 @@ a:focus {
 
 .problems__inner {
     position: sticky;
+    position: -webkit-sticky;
     top: calc(50% - 300px);
 }
 
@@ -1189,7 +1191,7 @@ a:focus {
 
 @media (max-width: 834px) {
     .be__block-text {
-        width: 276px;
+        max-width: 276px;
     }
 }
 
@@ -1394,7 +1396,6 @@ a:focus {
 
 .footer {
     padding: 80px 0;
-    background: url("../images/footer/bg.png") center/cover no-repeat;
 }
 
 .footer__inner {

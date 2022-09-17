@@ -3,6 +3,7 @@
   padding: 90px 0px;
 
   height: 3000px;
+  // overflow: scroll;
 
   @include breakpoint(834px) {
     height: auto;
@@ -15,6 +16,7 @@
 
   &__inner {
     position: sticky;
+    position: -webkit-sticky;
     top: calc(50% - 300px);
 
     @include breakpoint(834px) {
