@@ -1,0 +1,122 @@
+.footer {
+  padding-bottom: 80px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+
+    @include breakpoint(600px) {
+      gap: 50px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__img {
+    width: 205px;
+    height: auto;
+
+    @include breakpoint(600px) {
+      width: 163px;
+    }
+  }
+
+  &__p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: rgba(12, 7, 72, 0.7);
+
+    @include breakpoint(600px) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 8px;
+
+    @include breakpoint(600px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__social-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 196px;
+    height: 60px;
+    border-radius: 12px;
+
+    background: rgba(12, 7, 72, 0.07);
+
+    @include breakpoint(600px) {
+      // margin-right: auto;
+    }
+  }
+
+  &__social-download-img {
+    padding-top: 4px;
+  }
+
+  &__social-socials {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__social-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+
+    background: rgba(12, 7, 72, 0.07);
+  }
+
+  &__social-social-img {
+  }
+
+  &__nbs {
+    padding-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: rgba(12, 7, 72, 0.6);
+
+    @include breakpoint(600px) {
+      font-size: 16px;
+      line-height: 20px;
+
+      padding-top: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 24px;
+
+    @include breakpoint(600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #0c0748;
+  }
+}
