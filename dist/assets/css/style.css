@@ -400,7 +400,12 @@ textarea {
 
 html {
     font-size: 16px;
-    overflow-x: hidden;
+}
+
+@media (max-width: 834px) {
+    html {
+        overflow-x: hidden;
+    }
 }
 
 body {

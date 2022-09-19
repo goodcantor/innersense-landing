@@ -3,6 +3,10 @@
   background: url("../images/be/bg.png") center/cover no-repeat;
   padding: 140px 0;
 
+  @include breakpoint(834px) {
+    padding-top: 100px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;

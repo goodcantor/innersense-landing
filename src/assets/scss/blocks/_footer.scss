@@ -1,6 +1,10 @@
 .footer {
   padding: 80px 0;
-  // background: url("../images/footer/bg.png") center/cover no-repeat;
+  background: url("../images/footer/bg.png") center/cover no-repeat;
+
+  @include breakpoint(600px) {
+    padding-top: 0px;
+  }
 
   &__inner {
     display: flex;
@@ -60,6 +64,12 @@
 
     background: rgba(12, 7, 72, 0.07);
 
+    transition: background 0.3s ease !important;
+
+    &:hover {
+      background: #c5c4ce;
+    }
+
     @include breakpoint(600px) {
       // margin-right: auto;
     }
@@ -84,6 +94,12 @@
     border-radius: 12px;
 
     background: rgba(12, 7, 72, 0.07);
+
+    transition: background 0.3s ease !important;
+
+    &:hover {
+      background: #c5c4ce;
+    }
   }
 
   &__social-social-img {

@@ -5,6 +5,10 @@
 
   position: relative;
 
+  @include breakpoint(834px) {
+    margin-top: 0;
+  }
+
   & > div {
     display: flex;
     justify-content: center;
@@ -60,5 +64,6 @@
 
   &__text-bold {
     font-weight: 700;
+    font-family: "Value Serif Pro";
   }
 }
