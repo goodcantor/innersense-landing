@@ -1,6 +1,13 @@
 .try {
   padding: 140px 0;
 
+  @include breakpoint(834px) {
+    padding: 100px 0;
+  }
+  @include breakpoint(600px) {
+    padding: 90px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -8,8 +15,8 @@
     gap: 36px;
 
     @include breakpoint(600px) {
-    gap: 24px;
-  }
+      gap: 24px;
+    }
   }
 
   &__btn {
@@ -22,6 +29,13 @@
     line-height: 28px;
 
     color: white;
+
+    transition: all 0.3s ease !important;
+
+    &:hover {
+      background: #3d396d;
+      color: #ffffff;
+    }
 
     @include breakpoint(600px) {
       font-size: 16px;

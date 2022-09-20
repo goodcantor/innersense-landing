@@ -2,6 +2,10 @@
   padding: 80px 0;
   background: url("../images/footer/bg.png") center/cover no-repeat;
 
+  @include breakpoint(600px) {
+    padding-top: 0px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -31,12 +35,14 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
+    letter-spacing: 0.38px;
 
     color: rgba(12, 7, 72, 0.7);
 
     @include breakpoint(600px) {
       font-size: 16px;
       line-height: 21px;
+      letter-spacing: -0.32px;
     }
   }
 
@@ -59,6 +65,12 @@
     border-radius: 12px;
 
     background: rgba(12, 7, 72, 0.07);
+
+    transition: background 0.3s ease !important;
+
+    &:hover {
+      background: #c5c4ce;
+    }
 
     @include breakpoint(600px) {
       // margin-right: auto;
@@ -84,6 +96,12 @@
     border-radius: 12px;
 
     background: rgba(12, 7, 72, 0.07);
+
+    transition: background 0.3s ease !important;
+
+    &:hover {
+      background: #c5c4ce;
+    }
   }
 
   &__social-social-img {
@@ -92,14 +110,16 @@
   &__nbs {
     padding-top: 12px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    letter-spacing: 0.38px;
+    line-height: 25px;
 
-    color: rgba(12, 7, 72, 0.6);
+    color: rgba(12, 7, 72, 0.7);
 
     @include breakpoint(600px) {
       font-size: 16px;
       line-height: 20px;
+      letter-spacing: -0.32px;
 
       padding-top: 20px;
     }

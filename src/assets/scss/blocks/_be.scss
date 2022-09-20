@@ -3,6 +3,10 @@
   background: url("../images/be/bg.png") center/cover no-repeat;
   padding: 140px 0;
 
+  @include breakpoint(834px) {
+    padding-top: 100px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -21,7 +25,7 @@
     @include breakpoint(600px) {
       flex-direction: column;
       justify-content: center;
-      gap: 15px;
+      gap: 30px;
     }
   }
 
@@ -49,7 +53,7 @@
   &__block-text {
     max-width: 382px;
     @include breakpoint(834px) {
-      width: 276px;
+      max-width: 276px;
     }
     @include breakpoint(600px) {
       width: auto;
@@ -68,6 +72,7 @@
     @include breakpoint(834px) {
       font-size: 24px;
       line-height: 29px;
+      letter-spacing: 0.26px;
     }
     @include breakpoint(600px) {
       text-align: center;
@@ -83,7 +88,9 @@
     @include breakpoint(834px) {
       font-size: 16px;
       line-height: 21px;
+      letter-spacing: -0.32px;
       color: #0c0748;
+      max-width: 250px;
     }
     @include breakpoint(600px) {
       text-align: center;

@@ -29,6 +29,14 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+    font-family: "Value Serif Pro";
+  src: url("../fonts/fonts/ValueSerifProBold.ttf");
+  src: local("Value Serif Pro bold"), local("ValueSerifProBold"), url("../fonts/ValueSerifProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -402,6 +410,12 @@ html {
     font-size: 16px;
 }
 
+@media (max-width: 834px) {
+    html {
+        overflow-x: hidden;
+    }
+}
+
 body {
     overflow-x: hidden;
     font-family: "SF Pro Display", sans-serif;
@@ -435,6 +449,7 @@ a:focus {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-top: 12px;
 }
 
 @media (max-width: 600px) {
@@ -456,6 +471,12 @@ a:focus {
     border: 1px solid #0c0748;
     border-radius: 30px;
     margin: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.header__btn:hover {
+    background: #3d396d;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
@@ -486,14 +507,14 @@ a:focus {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 80px;
-        padding: 60px 0 100px 0;
+        padding: 60px 0 0px 0;
     }
 }
 
 @media (max-width: 600px) {
     .home__inner {
         gap: 40px;
-        padding: 40px 0 80px 0;
+        padding: 40px 0 0px 0;
     }
 }
 
@@ -550,6 +571,7 @@ a:focus {
 
 .home__left-title-bold {
     font-weight: 700;
+    font-family: "Value Serif Pro";
 }
 
 .home__left-p {
@@ -591,6 +613,11 @@ a:focus {
     padding: 14px 24px;
     background: #0c0748;
     border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.home__left-btn:hover {
+    background: #3d396d;
 }
 
 @media (max-width: 600px) {
@@ -626,14 +653,14 @@ a:focus {
 .home__right-top-label {
     position: absolute;
     top: 15px;
-    right: -30px;
+    right: 0px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     text-align: center;
     color: #0c0748;
-    background: #fffbf9;
+    background: #ffffff;
     box-shadow: -3px 6px 12px rgba(0, 0, 0, 0.04);
     border-radius: 16px;
     padding: 16px;
@@ -668,7 +695,7 @@ a:focus {
     line-height: 21px;
     text-align: center;
     color: #0c0748;
-    background: #fffbf9;
+    background: #ffffff;
     box-shadow: -3px 6px 12px rgba(0, 0, 0, 0.04);
     border-radius: 16px;
     padding: 16px;
@@ -711,6 +738,7 @@ a:focus {
 
 .problems__inner {
     position: sticky;
+    position: -webkit-sticky;
     top: calc(50% - 300px);
 }
 
@@ -741,6 +769,7 @@ a:focus {
 
 .problems__title-bold {
     font-weight: 700;
+    font-family: "Value Serif Pro";
 }
 
 .problems__content {
@@ -1068,6 +1097,12 @@ a:focus {
     position: relative;
 }
 
+@media (max-width: 834px) {
+    .combine {
+        margin-top: 0;
+    }
+}
+
 .combine > div {
     display: -ms-flexbox;
     display: flex;
@@ -1124,11 +1159,18 @@ a:focus {
 
 .combine__text-bold {
     font-weight: 700;
+    font-family: "Value Serif Pro";
 }
 
 .be {
     background: url("../images/be/bg.png") center/cover no-repeat;
     padding: 140px 0;
+}
+
+@media (max-width: 834px) {
+    .be {
+        padding-top: 100px;
+    }
 }
 
 .be__inner {
@@ -1189,7 +1231,7 @@ a:focus {
 
 @media (max-width: 834px) {
     .be__block-text {
-        width: 276px;
+        max-width: 276px;
     }
 }
 
@@ -1262,10 +1304,6 @@ a:focus {
     max-width: 870px;
 }
 
-.how {
-    padding-top: 140px;
-}
-
 .how__content {
     display: -ms-flexbox;
     display: flex;
@@ -1324,6 +1362,7 @@ a:focus {
 .how__right-img {
     width: 100%;
     height: auto;
+    max-width: 543px;
 }
 
 @media (max-width: 600px) {
@@ -1338,6 +1377,18 @@ a:focus {
 
 .try {
     padding: 140px 0;
+}
+
+@media (max-width: 834px) {
+    .try {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .try {
+        padding: 90px 0;
+    }
 }
 
 .try__inner {
@@ -1364,6 +1415,12 @@ a:focus {
     font-size: 17px;
     line-height: 28px;
     color: white;
+    transition: all 0.3s ease !important;
+}
+
+.try__btn:hover {
+    background: #3d396d;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
@@ -1395,6 +1452,12 @@ a:focus {
 .footer {
     padding: 80px 0;
     background: url("../images/footer/bg.png") center/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding-top: 0px;
+    }
 }
 
 .footer__inner {
@@ -1468,6 +1531,11 @@ a:focus {
     height: 60px;
     border-radius: 12px;
     background: rgba(12, 7, 72, 0.07);
+    transition: background 0.3s ease !important;
+}
+
+.footer__social-download:hover {
+    background: #c5c4ce;
 }
 
 .footer__social-download-img {
@@ -1491,6 +1559,11 @@ a:focus {
     height: 60px;
     border-radius: 12px;
     background: rgba(12, 7, 72, 0.07);
+    transition: background 0.3s ease !important;
+}
+
+.footer__social-social:hover {
+    background: #c5c4ce;
 }
 
 .footer__nbs {

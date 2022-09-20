@@ -5,6 +5,10 @@
 
   position: relative;
 
+  @include breakpoint(834px) {
+    margin-top: 0;
+  }
+
   & > div {
     display: flex;
     justify-content: center;
@@ -43,13 +47,24 @@
 
   &__text {
     margin-bottom: 24px;
-    font-size: 30px;
-    line-height: 36px;
+    font-family: "SF Pro Display";
+
     font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+
+    letter-spacing: 0.36px;
     text-align: center;
     color: #0c0748;
-    max-width: 600px;
+    max-width: 500px;
 
+    @include breakpoint(834px) {
+      font-size: 28px;
+      line-height: 33px;
+      letter-spacing: 0.33px;
+
+      max-width: 490px;
+    }
     @include breakpoint(600px) {
       font-size: 18px;
       line-height: 21px;
@@ -59,6 +74,5 @@
   }
 
   &__text-bold {
-    font-weight: 700;
   }
 }

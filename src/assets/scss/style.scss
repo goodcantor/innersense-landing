@@ -13,6 +13,9 @@
 
 html {
   font-size: 16px;
+  @include breakpoint(834px) {
+    overflow-x: hidden;
+  }
 }
 
 body {

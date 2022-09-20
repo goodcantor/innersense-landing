@@ -26,6 +26,20 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Value Serif Pro";
+  src: url("../fonts/fonts/ValueSerifProMedium.ttf");
+  src: local("Value Serif Pro Regular"), local("ValueSerifProMedium"), url("../fonts/ValueSerifProMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Value Serif Pro";
+  src: url("../fonts/fonts/ValueSerifProBold.ttf");
+  src: local("Value Serif Pro bold"), local("ValueSerifProBold"), url("../fonts/ValueSerifProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -402,6 +416,11 @@ textarea {
 html {
   font-size: 16px;
 }
+@media (max-width: 834px) {
+  html {
+    overflow-x: hidden;
+  }
+}
 
 body {
   overflow-x: hidden;
@@ -431,6 +450,7 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 18px 0;
 }
 @media (max-width: 600px) {
   .header__img {
@@ -450,6 +470,11 @@ a:focus {
   border: 1px solid #0c0748;
   border-radius: 30px;
   margin: 12px 0;
+  transition: all 0.3s ease;
+}
+.header__btn:hover {
+  background: #3d396d;
+  color: #ffffff;
 }
 @media (max-width: 600px) {
   .header__btn {
@@ -473,13 +498,13 @@ a:focus {
   .home__inner {
     flex-wrap: wrap;
     gap: 80px;
-    padding: 60px 0 100px 0;
+    padding: 60px 0 0px 0;
   }
 }
 @media (max-width: 600px) {
   .home__inner {
     gap: 40px;
-    padding: 40px 0 80px 0;
+    padding: 40px 0 0px 0;
   }
 }
 .home__left {
@@ -500,18 +525,19 @@ a:focus {
   }
 }
 .home__left-title {
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: "Value Serif Pro";
   font-size: 56px;
   line-height: 67px;
+  letter-spacing: -0.5px;
   color: #0c0748;
-  max-width: 693px;
+  max-width: 725px;
 }
 @media (max-width: 834px) {
   .home__left-title {
     text-align: center;
     font-size: 42px;
+    letter-spacing: -0.2px;
     line-height: 50px;
     max-width: 600px;
   }
@@ -520,10 +546,8 @@ a:focus {
   .home__left-title {
     font-size: 30px;
     line-height: 36px;
+    max-width: 280px;
   }
-}
-.home__left-title-bold {
-  font-weight: 700;
 }
 .home__left-p {
   font-family: "SF Pro Display";
@@ -531,6 +555,7 @@ a:focus {
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
+  letter-spacing: 0.38px;
   color: rgba(12, 7, 72, 0.7);
   max-width: 509px;
 }
@@ -552,13 +577,18 @@ a:focus {
   display: flex;
   align-items: center;
   font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.22px;
   color: #ffffff;
   padding: 14px 24px;
   background: #0c0748;
   border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.home__left-btn:hover {
+  background: #3d396d;
 }
 @media (max-width: 600px) {
   .home__left-btn {
@@ -567,7 +597,7 @@ a:focus {
   }
 }
 .home__left-btn-svg {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 @media (max-width: 834px) {
   .home__right {
@@ -593,7 +623,7 @@ a:focus {
   line-height: 21px;
   text-align: center;
   color: #0c0748;
-  background: #fffbf9;
+  background: #ffffff;
   box-shadow: -3px 6px 12px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   padding: 16px;
@@ -625,7 +655,7 @@ a:focus {
   line-height: 21px;
   text-align: center;
   color: #0c0748;
-  background: #fffbf9;
+  background: #ffffff;
   box-shadow: -3px 6px 12px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   padding: 16px;
@@ -663,6 +693,7 @@ a:focus {
 }
 .problems__inner {
   position: sticky;
+  position: -webkit-sticky;
   top: calc(50% - 300px);
 }
 @media (max-width: 834px) {
@@ -672,23 +703,29 @@ a:focus {
 }
 .problems__title {
   text-align: center;
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 41px;
+  font-family: "Value Serif Pro";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.2px;
   color: #0c0748;
   margin-bottom: 67px;
+}
+@media (max-width: 834px) {
+  .problems__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.374px;
+  }
 }
 @media (max-width: 600px) {
   .problems__title {
     margin-bottom: 30px;
     font-size: 28px;
     line-height: 34px;
+    letter-spacing: -0.2px;
   }
-}
-.problems__title-bold {
-  font-weight: 700;
 }
 .problems__content {
   display: flex;
@@ -948,6 +985,11 @@ a:focus {
   background: #f9f4fe;
   position: relative;
 }
+@media (max-width: 834px) {
+  .combine {
+    margin-top: 0;
+  }
+}
 .combine > div {
   display: flex;
   justify-content: center;
@@ -974,12 +1016,22 @@ a:focus {
 }
 .combine__text {
   margin-bottom: 24px;
-  font-size: 30px;
-  line-height: 36px;
+  font-family: "SF Pro Display";
   font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 0.36px;
   text-align: center;
   color: #0c0748;
-  max-width: 600px;
+  max-width: 500px;
+}
+@media (max-width: 834px) {
+  .combine__text {
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.33px;
+    max-width: 490px;
+  }
 }
 @media (max-width: 600px) {
   .combine__text {
@@ -988,13 +1040,14 @@ a:focus {
     max-width: 320px;
   }
 }
-.combine__text-bold {
-  font-weight: 700;
-}
-
 .be {
   background: url("../images/be/bg.png") center/cover no-repeat;
   padding: 140px 0;
+}
+@media (max-width: 834px) {
+  .be {
+    padding-top: 100px;
+  }
 }
 .be__inner {
   display: flex;
@@ -1016,7 +1069,7 @@ a:focus {
   .be__block {
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
   }
 }
 .be__block-img1 {
@@ -1039,7 +1092,7 @@ a:focus {
 }
 @media (max-width: 834px) {
   .be__block-text {
-    width: 276px;
+    max-width: 276px;
   }
 }
 @media (max-width: 600px) {
@@ -1059,6 +1112,7 @@ a:focus {
   .be__block-title {
     font-size: 24px;
     line-height: 29px;
+    letter-spacing: 0.26px;
   }
 }
 @media (max-width: 600px) {
@@ -1076,7 +1130,9 @@ a:focus {
   .be__block-p {
     font-size: 16px;
     line-height: 21px;
+    letter-spacing: -0.32px;
     color: #0c0748;
+    max-width: 250px;
   }
 }
 @media (max-width: 600px) {
@@ -1099,9 +1155,6 @@ a:focus {
   max-width: 870px;
 }
 
-.how {
-  padding-top: 140px;
-}
 .how__content {
   display: flex;
   justify-content: space-between;
@@ -1144,6 +1197,7 @@ a:focus {
 .how__right-img {
   width: 100%;
   height: auto;
+  max-width: 543px;
 }
 
 @media (max-width: 600px) {
@@ -1158,6 +1212,16 @@ a:focus {
 
 .try {
   padding: 140px 0;
+}
+@media (max-width: 834px) {
+  .try {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 600px) {
+  .try {
+    padding: 90px 0;
+  }
 }
 .try__inner {
   display: flex;
@@ -1178,6 +1242,11 @@ a:focus {
   font-size: 17px;
   line-height: 28px;
   color: white;
+  transition: all 0.3s ease !important;
+}
+.try__btn:hover {
+  background: #3d396d;
+  color: #ffffff;
 }
 @media (max-width: 600px) {
   .try__btn {
@@ -1207,6 +1276,11 @@ a:focus {
   padding: 80px 0;
   background: url("../images/footer/bg.png") center/cover no-repeat;
 }
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 0px;
+  }
+}
 .footer__inner {
   display: flex;
   flex-direction: column;
@@ -1235,12 +1309,14 @@ a:focus {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
+  letter-spacing: 0.38px;
   color: rgba(12, 7, 72, 0.7);
 }
 @media (max-width: 600px) {
   .footer__p {
     font-size: 16px;
     line-height: 21px;
+    letter-spacing: -0.32px;
   }
 }
 .footer__social {
@@ -1260,6 +1336,10 @@ a:focus {
   height: 60px;
   border-radius: 12px;
   background: rgba(12, 7, 72, 0.07);
+  transition: background 0.3s ease !important;
+}
+.footer__social-download:hover {
+  background: #c5c4ce;
 }
 .footer__social-download-img {
   padding-top: 4px;
@@ -1276,18 +1356,24 @@ a:focus {
   height: 60px;
   border-radius: 12px;
   background: rgba(12, 7, 72, 0.07);
+  transition: background 0.3s ease !important;
+}
+.footer__social-social:hover {
+  background: #c5c4ce;
 }
 .footer__nbs {
   padding-top: 12px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgba(12, 7, 72, 0.6);
+  font-size: 20px;
+  letter-spacing: 0.38px;
+  line-height: 25px;
+  color: rgba(12, 7, 72, 0.7);
 }
 @media (max-width: 600px) {
   .footer__nbs {
     font-size: 16px;
     line-height: 20px;
+    letter-spacing: -0.32px;
     padding-top: 20px;
   }
 }
