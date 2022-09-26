@@ -2,6 +2,7 @@
   // overflow-x: hidden;
   background: url("../images/be/bg.png") center/cover no-repeat;
   padding: 140px 0;
+  padding-bottom: 70px;
 
   @include breakpoint(834px) {
     padding-top: 100px;

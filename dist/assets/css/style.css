@@ -32,6 +32,14 @@
 
 @font-face {
     font-family: "Value Serif Pro";
+  src: url("../fonts/fonts/ValueSerifProMedium.ttf");
+  src: local("Value Serif Pro Regular"), local("ValueSerifProMedium"), url("../fonts/ValueSerifProMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Value Serif Pro";
   src: url("../fonts/fonts/ValueSerifProBold.ttf");
   src: local("Value Serif Pro bold"), local("ValueSerifProBold"), url("../fonts/ValueSerifProBold.ttf") format("truetype");
   font-weight: 700;
@@ -449,7 +457,7 @@ a:focus {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-top: 12px;
+    padding: 18px 0;
 }
 
 @media (max-width: 600px) {
@@ -490,6 +498,7 @@ a:focus {
 
 .home {
     background: #fff url("../images/first/Bg2.png") center/cover no-repeat;
+    min-height: 100vh;
 }
 
 .home__inner {
@@ -544,19 +553,20 @@ a:focus {
 }
 
 .home__left-title {
-    font-family: "SF Pro Display";
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: "Value Serif Pro";
     font-size: 56px;
     line-height: 67px;
+    letter-spacing: -0.5px;
     color: #0c0748;
-    max-width: 693px;
+    max-width: 725px;
 }
 
 @media (max-width: 834px) {
     .home__left-title {
         text-align: center;
         font-size: 42px;
+        letter-spacing: -0.2px;
         line-height: 50px;
         max-width: 600px;
     }
@@ -566,12 +576,8 @@ a:focus {
     .home__left-title {
         font-size: 30px;
         line-height: 36px;
+        max-width: 280px;
     }
-}
-
-.home__left-title-bold {
-    font-weight: 700;
-    font-family: "Value Serif Pro";
 }
 
 .home__left-p {
@@ -580,6 +586,7 @@ a:focus {
     font-weight: 400;
     font-size: 22px;
     line-height: 28px;
+    letter-spacing: 0.38px;
     color: rgba(12, 7, 72, 0.7);
     max-width: 509px;
 }
@@ -606,9 +613,10 @@ a:focus {
     -ms-flex-align: center;
     align-items: center;
     font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.36px;
     color: #ffffff;
     padding: 14px 24px;
     background: #0c0748;
@@ -628,7 +636,7 @@ a:focus {
 }
 
 .home__left-btn-svg {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 @media (max-width: 834px) {
@@ -750,13 +758,22 @@ a:focus {
 
 .problems__title {
     text-align: center;
-    font-family: "SF Pro Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 41px;
+    font-family: "Value Serif Pro";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.2px;
     color: #0c0748;
     margin-bottom: 67px;
+}
+
+@media (max-width: 834px) {
+    .problems__title {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.374px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -764,12 +781,8 @@ a:focus {
         margin-bottom: 30px;
         font-size: 28px;
         line-height: 34px;
+        letter-spacing: -0.2px;
     }
-}
-
-.problems__title-bold {
-    font-weight: 700;
-    font-family: "Value Serif Pro";
 }
 
 .problems__content {
@@ -915,6 +928,8 @@ a:focus {
 
 .problems__right-img {
     width: 100%;
+    max-width: 532px;
+    height: auto;
 }
 
 @media (max-width: 834px) {
@@ -1141,12 +1156,23 @@ a:focus {
 
 .combine__text {
     margin-bottom: 24px;
-    font-size: 30px;
-    line-height: 36px;
+    font-family: "SF Pro Display";
     font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.36px;
     text-align: center;
     color: #0c0748;
-    max-width: 600px;
+    max-width: 500px;
+}
+
+@media (max-width: 834px) {
+    .combine__text {
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 0.33px;
+        max-width: 490px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1157,14 +1183,10 @@ a:focus {
     }
 }
 
-.combine__text-bold {
-    font-weight: 700;
-    font-family: "Value Serif Pro";
-}
-
 .be {
     background: url("../images/be/bg.png") center/cover no-repeat;
     padding: 140px 0;
+    padding-bottom: 70px;
 }
 
 @media (max-width: 834px) {
@@ -1203,7 +1225,7 @@ a:focus {
         flex-direction: column;
         -ms-flex-pack: center;
         justify-content: center;
-        gap: 15px;
+        gap: 30px;
     }
 }
 
@@ -1254,6 +1276,7 @@ a:focus {
     .be__block-title {
         font-size: 24px;
         line-height: 29px;
+        letter-spacing: 0.26px;
     }
 }
 
@@ -1274,7 +1297,9 @@ a:focus {
     .be__block-p {
         font-size: 16px;
         line-height: 21px;
+        letter-spacing: -0.32px;
         color: #0c0748;
+        max-width: 250px;
     }
 }
 
@@ -1302,6 +1327,16 @@ a:focus {
 
 .be > .container {
     max-width: 870px;
+}
+
+.how {
+    padding-top: 70px;
+}
+
+@media (max-width: 834px) {
+    .how {
+        padding-top: 40px;
+    }
 }
 
 .how__content {
@@ -1352,6 +1387,11 @@ a:focus {
     }
 }
 
+.how__left-row-img {
+    max-width: 27px;
+    width: 100%;
+}
+
 .how__left-row-text {
     font-weight: 400;
     font-size: 20px;
@@ -1363,6 +1403,16 @@ a:focus {
     width: 100%;
     height: auto;
     max-width: 543px;
+}
+
+.how .problems__title {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 834px) {
+    .how .problems__title {
+        margin-bottom: 42px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1408,6 +1458,7 @@ a:focus {
 }
 
 .try__btn {
+    letter-spacing: 0.36px;
     padding: 12px 40px;
     background: #0c0748;
     border-radius: 30px;
@@ -1497,6 +1548,7 @@ a:focus {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
+    letter-spacing: 0.38px;
     color: rgba(12, 7, 72, 0.7);
 }
 
@@ -1504,6 +1556,7 @@ a:focus {
     .footer__p {
         font-size: 16px;
         line-height: 21px;
+        letter-spacing: -0.32px;
     }
 }
 
@@ -1569,15 +1622,17 @@ a:focus {
 .footer__nbs {
     padding-top: 12px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(12, 7, 72, 0.6);
+    font-size: 20px;
+    letter-spacing: 0.38px;
+    line-height: 25px;
+    color: rgba(12, 7, 72, 0.7);
 }
 
 @media (max-width: 600px) {
     .footer__nbs {
         font-size: 16px;
         line-height: 20px;
+        letter-spacing: -0.32px;
         padding-top: 20px;
     }
 }
