@@ -1,15 +1,23 @@
 .footer {
   padding: 80px 0;
-  background: url("../images/footer/bg.png") center/cover no-repeat;
+  // background: url("../images/footer/bg.png") center/cover no-repeat;
+  background: linear-gradient(
+    24.01deg,
+    #ffffff 26.52%,
+    #fff9f0 57.41%,
+    #fff2f3 113.37%
+  );
+  transform: rotate(-180deg);
 
   @include breakpoint(600px) {
-    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 96px;
+    transform: rotate(-180deg);
 
     @include breakpoint(600px) {
       gap: 50px;
