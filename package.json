@@ -35,5 +35,8 @@
   "dependencies": {
     "aos": "^2.3.4",
     "sass": "^1.49.7"
+  },
+  "scripts": {
+    "build": "gulp build"
   }
 }

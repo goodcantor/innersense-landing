@@ -29,6 +29,7 @@ const path = {
 		css: distPath + 'assets/css/',
 		images: distPath + 'assets/images/',
 		fonts: distPath + 'assets/fonts/',
+		txt: distPath,
 	},
 	src: {
 		html: srcPath + '*.html',
@@ -38,6 +39,7 @@ const path = {
 			srcPath +
 			'assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
 		fonts: srcPath + 'assets/fonts/**/*.{eot,woff,woff2,ttf,svg}',
+		txt: srcPath +  'assets/*.txt',
 	},
 	watch: {
 		html: srcPath + '**/*.html',
@@ -247,6 +249,14 @@ function fonts(cb) {
 	cb();
 }
 
+function txt(cb) {
+	return src(path.src.txt)
+		.pipe(dest(path.build.txt))
+		.pipe(browserSync.reload({ stream: true }));
+
+	cb();
+}
+
 function clean(cb) {
 	return del(path.clean);
 
@@ -261,7 +271,7 @@ function watchFiles() {
 	gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, txt));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 /* Exports Tasks */
